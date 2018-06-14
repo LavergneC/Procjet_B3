@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.freescale.cdt.launch.cw.download">
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDconstant" value="true"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDexecutable" value="true"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDinitialized" value="true"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IDuninitialized" value="true"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVconstant" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVexecutable" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVinitialized" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.IVuninitialized" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDconstant" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDexecutable" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDinitialized" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SDuninitialized" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVconstant" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVexecutable" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVinitialized" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Download.SVuninitialized" value="false"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.initPath" value=""/>
+<stringAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.memConfigPath" value="${ProjDirPath}/Project_Settings/Debugger/MC9S08QE8.mem"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.simulator" value=""/>
+<stringAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.systemType" value="com.freescale.cw.system.hcs08.HCS08QE.MC9S08QE8"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.useInitFile" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.useMemoryConfigFile" value="true"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.HC08 Debugger.processor" value="MC9S08QE8"/>
+<listAttribute key="com.freescale.cdt.debug.cw.CoreNameList">
+<listEntry value="MC9S08QE8#0"/>
+</listAttribute>
+<booleanAttribute key="com.freescale.cdt.debug.cw.Embedded Download.ExecuteTasks" value="true"/>
+<listAttribute key="com.freescale.cdt.debug.cw.Embedded Download.TaskInitialLaunches">
+<listEntry value="true"/>
+</listAttribute>
+<listAttribute key="com.freescale.cdt.debug.cw.Embedded Download.TaskNames">
+<listEntry value="${ProjDirPath}/Project_Settings/Debugger/MC9S08QE8.tcl"/>
+</listAttribute>
+<listAttribute key="com.freescale.cdt.debug.cw.Embedded Download.TaskSuccessiveRuns">
+<listEntry value="true"/>
+</listAttribute>
+<listAttribute key="com.freescale.cdt.debug.cw.Embedded Download.TaskTypes">
+<listEntry value="___CLDE_SCRIPT___"/>
+</listAttribute>
+<stringAttribute key="com.freescale.cdt.debug.cw.UDPPort" value="1234"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.core.settings.ConnectionCommonData.TargetConnectionLost.RetryConnectionOn" value="false"/>
+<intAttribute key="com.freescale.cdt.debug.cw.core.settings.ConnectionCommonData.TargetConnectionLost.RetryTimeout" value="20"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.core.settings.ConnectionCommonData.TargetConnectionLost.RetryWithTimeoutOn" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.core.settings.ConnectionCommonData.TargetConnectionLost.TerminateConnectionOn" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.core.settings.ConnectionCommonData.TargetConnectionLost.promptUserActionOn" value="true"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Protocol Plugin Name" value="HC08 GDI"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Type" value="net.sourceforge.usbdm.connections.usbdm.hcs08"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Processor Attr Name" value="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.HC08 Debugger.processor"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.core.settings.GdiConnection.Common.PhysicalConnectionAttributeBase" value="net.sourceforge.usbdm.connections.usbdm."/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.core.settings.GdiConnection.Common.logData" value="false"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.core.settings.rseSystemId" value="com.freescale.cdt.debug.cw.core.ui.rse.systemtype.bareboard.hardware.180320163301+0100"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.core.settings.wizardSystemNameHint" value="USBDM"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.debuggerAddress" value="127.0.0.1"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.disableIO" value="false"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.ethCtrl" value="UEC1"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.executePerCoresReset" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.executePerprocessorReset" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.executeReset" value="false"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.gateway" value="127.0.0.1"/>
+<listAttribute key="com.freescale.cdt.debug.cw.initPathList">
+<listEntry value=""/>
+</listAttribute>
+<stringAttribute key="com.freescale.cdt.debug.cw.macAddress" value="**-**-**-**-**-**"/>
+<listAttribute key="com.freescale.cdt.debug.cw.memConfigPathList">
+<listEntry value="${ProjDirPath}/Project_Settings/Debugger/MC9S08QE8.mem"/>
+</listAttribute>
+<stringAttribute key="com.freescale.cdt.debug.cw.netMask" value="255.255.255.255"/>
+<listAttribute key="com.freescale.cdt.debug.cw.perCoreResetList"/>
+<listAttribute key="com.freescale.cdt.debug.cw.perProcessorResetList"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.processor" value="MC9S08QE8"/>
+<listAttribute key="com.freescale.cdt.debug.cw.runOutOfResetList">
+<listEntry value="false"/>
+</listAttribute>
+<stringAttribute key="com.freescale.cdt.debug.cw.targetAddress" value="127.0.0.1"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.useGateway" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.useHSSTIO" value="false"/>
+<listAttribute key="com.freescale.cdt.debug.cw.useInitPathList">
+<listEntry value="false"/>
+</listAttribute>
+<booleanAttribute key="com.freescale.cdt.debug.cw.useMacAddress" value="false"/>
+<listAttribute key="com.freescale.cdt.debug.cw.useMemConfigPathList">
+<listEntry value="true"/>
+</listAttribute>
+<booleanAttribute key="com.freescale.cdt.debug.cw.useNetworkTransferIO" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.useSerialTransferIO" value="false"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.useStopTransferIO" value="true"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.useUDPPort" value="false"/>
+<stringAttribute key="net.sourceforge.usbdm.connections.usbdm.Library" value="usbdm-gdi-hcs08.4"/>
+<stringAttribute key="net.sourceforge.usbdm.connections.usbdm.automaticReconnect" value="1"/>
+<stringAttribute key="net.sourceforge.usbdm.connections.usbdm.cycleTargetVddOnReset" value="0"/>
+<stringAttribute key="net.sourceforge.usbdm.connections.usbdm.cycleTargetVddonConnect" value="0"/>
+<stringAttribute key="net.sourceforge.usbdm.connections.usbdm.defaultBdmSerialNumber" value="Any connected USBDM"/>
+<stringAttribute key="net.sourceforge.usbdm.connections.usbdm.leaveTargetPowered" value="0"/>
+<stringAttribute key="net.sourceforge.usbdm.connections.usbdm.setTargetVdd" value="0"/>
+<stringAttribute key="net.sourceforge.usbdm.connections.usbdm.trimTargetClock" value="0"/>
+<stringAttribute key="net.sourceforge.usbdm.connections.usbdm.useAltBDMClock" value="255"/>
+<stringAttribute key="net.sourceforge.usbdm.connections.usbdm.useDebugBuild" value="false"/>
+<stringAttribute key="net.sourceforge.usbdm.connections.usbdm.useResetSignal" value="0"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.freescale.cdt.debug.cw.hc08.HC08Debugger"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_REGISTER_GROUPS" value=""/>
+<stringAttribute key="org.eclipse.cdt.launch.FORMAT" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&lt;contentList&gt;&lt;content id=&quot;[4]-tx_buffer-rf_datas-TPM1_interupt-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[3]-tx_buffer-rf_datas-TPM1_interupt-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[2]-tx_buffer-rf_datas-TPM1_interupt-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[1]-tx_buffer-rf_datas-TPM1_interupt-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[0]-tx_buffer-rf_datas-TPM1_interupt-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;oct-I2C_write_oct-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;registre-I2C_read-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;PTBD-(format)&quot; val=&quot;2&quot;/&gt;&lt;content id=&quot;rot-main-(format)&quot; val=&quot;2&quot;/&gt;&lt;content id=&quot;dy-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;dx-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;n-adns3080_write-(format)&quot; val=&quot;1&quot;/&gt;&lt;content id=&quot;*p_write-p_write-*spi_buffer-spi_buffer-spi_write-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;*p_read-p_read-*spi_buffer-spi_buffer-spi_write-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;nb_data-*spi_buffer-spi_buffer-spi_write-(format)&quot; val=&quot;1&quot;/&gt;&lt;content id=&quot;n-init_spi_buffer-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;nb_data-*spi_buffer-spi_buffer-init_spi_buffer-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;i-init_spi_buffer-(format)&quot; val=&quot;1&quot;/&gt;&lt;content id=&quot;nb_data-init_spi_buffer-(format)&quot; val=&quot;1&quot;/&gt;&lt;content id=&quot;nb_data-*adns3080-adns3080-*sensor-sensor-adns3080_write-(format)&quot; val=&quot;1&quot;/&gt;&lt;content id=&quot;nb_data-*adns3080-adns3080-sensor-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;value-main-(format)&quot; val=&quot;2&quot;/&gt;&lt;content id=&quot;registre-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;ID-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;mot-main-(format)&quot; val=&quot;2&quot;/&gt;&lt;content id=&quot;flag-SPI_read_sensor-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;i-SPI_read_sensor-(format)&quot; val=&quot;1&quot;/&gt;&lt;content id=&quot;*registre-registre-SPI_read_sensor-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;regis-SPI_read_sensor-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;motion-lireCfg-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;motionRegistre-lireCfg-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[2]-p-visuCam-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[1]-p-visuCam-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[0]-p-visuCam-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[2]-p-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[1]-p-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[0]-p-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;who_am_i-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;moteur-getPmoteur-(format)&quot; val=&quot;1&quot;/&gt;&lt;content id=&quot;i-setPS-(format)&quot; val=&quot;1&quot;/&gt;&lt;content id=&quot;M1dx-getPmoteurs-(format)&quot; val=&quot;1&quot;/&gt;&lt;content id=&quot;rot2-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;rot1-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;dy2-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;dy1-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;dx2-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;dx1-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;dy-v-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;dx-v-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;reg-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;*data-data-I2C_read-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;config-main-(format)&quot; val=&quot;2&quot;/&gt;&lt;content id=&quot;data-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;*data-data-motion_burst-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;motion-getMotion-(format)&quot; val=&quot;2&quot;/&gt;&lt;content id=&quot;value-initCapteurs-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;confB-initCapteurs-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;confA-initCapteurs-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;value-SPI_read_sensor-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[0]-buffer-*spi_buffer-spi_buffer-spi_write-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[1]-buffer-*spi_buffer-spi_buffer-spi_write-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;mask-putSSort-(format)&quot; val=&quot;2&quot;/&gt;&lt;content id=&quot;ss-putSSort-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;dy1-visuAcce-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;dy2-visuAcce-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;rot1-visuAcce-(format)&quot; val=&quot;2&quot;/&gt;&lt;content id=&quot;rot2-visuAcce-(format)&quot; val=&quot;2&quot;/&gt;&lt;content id=&quot;who_am_i-visuAcce-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;rotA-visuAcce-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;angle-visuAcce-(format)&quot; val=&quot;1&quot;/&gt;&lt;content id=&quot;i-visuAcce-(format)&quot; val=&quot;1&quot;/&gt;&lt;content id=&quot;ch-putHex-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;tempCh-putHex-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;flag_updated-rf_datas-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[0]-tx_buffer-rf_datas-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[1]-tx_buffer-rf_datas-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[2]-tx_buffer-rf_datas-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[3]-tx_buffer-rf_datas-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[4]-tx_buffer-rf_datas-main-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;*data-data-TX_RF-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;read-SPI_w-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;*write-write-SPI_w-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;status-Test_Sending-(format)&quot; val=&quot;4&quot;/&gt;&lt;/contentList&gt;"/>
+<stringAttribute key="org.eclipse.cdt.launch.GLOBAL_VARIABLES" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;globalVariableList/&gt;&#13;&#10;"/>
+<stringAttribute key="org.eclipse.cdt.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;memoryBlockExpressionList&gt;&#13;&#10;&lt;memoryBlockExpressionItem&gt;&#13;&#10;&lt;memorySpaceID text=&quot;default_memory_space&quot;/&gt;&#13;&#10;&lt;expression text=&quot;&amp;amp;rf_datas.tx_buffer[0]&quot;/&gt;&#13;&#10;&lt;/memoryBlockExpressionItem&gt;&#13;&#10;&lt;memoryBlockExpressionItem&gt;&#13;&#10;&lt;memorySpaceID text=&quot;default_memory_space&quot;/&gt;&#13;&#10;&lt;expression text=&quot;&amp;amp;rf_datas.tx_buffer[1]&quot;/&gt;&#13;&#10;&lt;/memoryBlockExpressionItem&gt;&#13;&#10;&lt;memoryBlockExpressionItem&gt;&#13;&#10;&lt;memorySpaceID text=&quot;default_memory_space&quot;/&gt;&#13;&#10;&lt;expression text=&quot;&amp;amp;i&quot;/&gt;&#13;&#10;&lt;/memoryBlockExpressionItem&gt;&#13;&#10;&lt;memoryBlockExpressionItem&gt;&#13;&#10;&lt;memorySpaceID text=&quot;default_memory_space&quot;/&gt;&#13;&#10;&lt;expression text=&quot;&amp;amp;confA&quot;/&gt;&#13;&#10;&lt;/memoryBlockExpressionItem&gt;&#13;&#10;&lt;/memoryBlockExpressionList&gt;&#13;&#10;"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="FLASH/ProjetB3_02.abs"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="ProjetB3_02"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="toolchain.config.hcs08.release.211656210"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/ProjetB3_02"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<stringAttribute key="process_factory_id" value="com.freescale.cdt.debug.cw.core.ProcessFactoryID"/>
+</launchConfiguration>
