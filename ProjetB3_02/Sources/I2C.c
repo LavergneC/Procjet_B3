@@ -6,6 +6,9 @@
  */
 #include "I2C.h"
 
+/*
+* Fonctions permettant la g√©n√©ration de commandes I2C de base
+*/
 void I2C_start(){
 	IICC1_MST = 1;
 	while(!IICS_BUSY);
@@ -24,7 +27,12 @@ void I2C_stop(){
 	while(IICS_BUSY);
 	return;
 }
+/*------------------------------------------------------------*/
 
+/*
+* I2C_init
+* Permet l'initialisation du module I2C du micro-contr√¥leur pour notre usage
+*/
 void I2C_init(){
 	IICC1 = 0x00;
 	IICC1_IICEN = 1;
@@ -34,6 +42,9 @@ void I2C_init(){
 	return;
 }
 
+/*
+* Fonctions I2C pour la lecture/√©criture d'un octect
+*/
 void I2C_write_oct(unsigned char oct, I2C_Status *status){
 	unsigned char flag = 1;
 	unsigned char i = 0;
@@ -45,7 +56,7 @@ void I2C_write_oct(unsigned char oct, I2C_Status *status){
 			flag = 0;
 		}
 	}
-	if(flag){ //Si il n'y a pas eu d'Ècriture
+	if(flag){ //Si il n'y a pas eu d'ÔøΩcriture
 		*status = I2C_FAILED;
 		return;
 	}
@@ -60,7 +71,7 @@ void I2C_write_oct(unsigned char oct, I2C_Status *status){
 			IICS_RXAK && i2 < TIME_OUT_I2C)/* en attente du ACK */
 		i2++;
 		
-	if(i2 == TIME_OUT_I2C || i==TIME_OUT_I2C) /* si le ACK ‡ pas marchÈ */
+	if(i2 == TIME_OUT_I2C || i==TIME_OUT_I2C) /* si le ACK ÔøΩ pas marchÔøΩ */
 		*status = I2C_FAILED;
 	
 	*status = I2C_OK;
@@ -74,16 +85,16 @@ void I2C_read_oct(unsigned char * oct, I2C_Status *status,unsigned char NACK){
 	for(i=0; i<TIME_OUT_I2C && flag; i++){
 		if(IICS_TCF){
 			IICC_TXAK = NACK; /* Envoi d'un no acknowledge*/
-			*oct = IICD; /*lecture de la donnÈe*/
+			*oct = IICD; /*lecture de la donnÔøΩe*/
 			flag = 0;
 		}
 	}
-	if(flag){ //Si il n'y a pas eu d'Ècriture
+	if(flag){ //Si il n'y a pas eu d'ÔøΩcriture
 		*status = I2C_FAILED;
 		return;
 	}
 	
-	while(!IICS_IICIF && i < TIME_OUT_I2C) /*vÈrification du no ack */
+	while(!IICS_IICIF && i < TIME_OUT_I2C) /*vÔøΩrification du no ack */
 			i++;
 	if(i == TIME_OUT_I2C){
 		*status = I2C_FAILED;
@@ -94,6 +105,9 @@ void I2C_read_oct(unsigned char * oct, I2C_Status *status,unsigned char NACK){
 	return;
 }
 
+/*
+* Fonctions I2C pour la lecture/√©criture d'une donn√©e dans un registre
+*/
 void I2C_write(unsigned char registre, unsigned char data, I2C_Status *status){
 	unsigned char i=0;
 	unsigned char flag = 1;

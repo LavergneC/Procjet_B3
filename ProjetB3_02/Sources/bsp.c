@@ -2,10 +2,11 @@
  * bps.c
  *
  *  Created on: Oct 6, 2017
- *      Author: Clément
+ *      Author: Clï¿½ment
  */
 #include "bsp.h"
 
+/* Fonctions utiles pour l'affiche par liaison sÃ©rie*/
 void move(unsigned char x, unsigned char y) 
 {
 	putc(VT100_ESC); 
@@ -34,12 +35,6 @@ void clear_screen(void)
 	putc('l');
 }
 
-/*void delai(unsigned short delay){
-	unsigned short i;
-	for (i=0; i <= delay; i++);
-	return;
-}*/
-
 void putHex(unsigned char ch){
 	const  unsigned char charHex[16] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
 
@@ -67,6 +62,12 @@ void putSSort(signed short ss){
 	putHex(ss&0x00FF);
 	return;
 }
+/*----------------------------------------------------------------------------------------*/
+
+/*
+* draw
+* Routine mettant en application l'usage de la centrale inertielle et affichant les informations ACCEL_X, ACCEL_Y et GYRO_Z sur un terminal
+*/
 
 void draw(){
 	unsigned char i;

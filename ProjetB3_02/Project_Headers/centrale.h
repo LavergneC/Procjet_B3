@@ -21,13 +21,26 @@
 
 #define CENTRALE_TIMEOUT 10
 
-typedef struct{
-	signed short dx;
-	signed short dy;
-}Vecteur;
-
+/*
+* initCentrale
+* fonction pour initialiser les registres de configuraiton du module
+* @param : I2C_Status *status : Variable permetant de s'assurer que les communicatin I2C ont fonctionés
+*/
 void initCentrale(I2C_Status *status);
+
+/*
+* getData
+* Permet de lire une donnée stockée sur deux registres se suivant;
+* @param : unsigned char registre : adresse du premier registre à lire
+* 		   unsigned char *data1 : valeur de retour pour le premier registre lu à l'adresse 'regsitre'
+		   unsigned char *data2 : valeur de retour pour le second registre lu à l'adresse 'regsitre'+1
+*/
 void getData(unsigned char registre, unsigned char *data1, unsigned char *data2);
+
+/*
+* visuAcce
+* Routine permettant de tester les communication avec la centrale en affichant par liaison série ACCEL_X, ACCLE_Y et GYRO_Z
+*/
 void visuAcce(void);
 
 #endif /* CENTRALE_H_ */

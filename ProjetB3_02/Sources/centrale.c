@@ -9,6 +9,11 @@
 #include "I2C.h"
 #include "bsp.h"
 
+/*
+* initCentrale
+* fonction pour initialiser les registres de configuraiton du module
+* @param : I2C_Status *status : Variable permetant de s'assurer que les communicatin I2C ont fonctionés
+*/
 void initCentrale(I2C_Status *status){
 	I2C_write(PWR_MGMT_1, 0x09, status);
 	if(*status == I2C_FAILED)
@@ -34,6 +39,13 @@ void initCentrale(I2C_Status *status){
 	return;
 }
 
+/*
+* getData
+* Permet de lire une donnée stockée sur deux registres se suivant;
+* @param : unsigned char registre : adresse du premier registre à lire
+* 		   unsigned char *data1 : valeur de retour pour le premier registre lu à l'adresse 'regsitre'
+		   unsigned char *data2 : valeur de retour pour le second registre lu à l'adresse 'regsitre'+1
+*/
 void getData(unsigned char registre, unsigned char *data1, unsigned char *data2){
 	unsigned char cpt=0;
 	I2C_Status status;
@@ -48,7 +60,10 @@ void getData(unsigned char registre, unsigned char *data1, unsigned char *data2)
 
 	return;
 }
-
+/*
+* visuAcce
+* Routine permettant de tester les communication avec la centrale en affichant par liaison série ACCEL_X, ACCLE_Y et GYRO_Z
+*/
 void visuAcce(void){
 	Vecteur v1,v2;
 	unsigned char dx1,dx2,dy1,dy2,rot1,rot2;

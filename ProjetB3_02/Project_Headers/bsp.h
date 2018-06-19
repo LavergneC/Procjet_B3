@@ -2,7 +2,7 @@
  * bsp.h
  *
  *  Created on: Oct 6, 2017
- *      Author: Cl�ment
+ *      Author: Cl�ment
  */
 
 #ifndef BSP_H_
@@ -26,13 +26,18 @@
 		SCID = (ch);		\
 }
 
+/* Fonctions utiles pour l'affiche par liaison série*/
 void move(unsigned char x, unsigned char y);
 void clear_screen(void);
-//void delai(unsigned short delay);
 
 void putHex(unsigned char ch);
 void putSSort(signed short ss);
+/*--------------------------------------------------*/
 
+/*
+* draw
+* Routine utilisé pour dessiner deux axes gradué pour une utilisation future
+*/
 void draw(void);
 
 #endif /* BSP_H_ */

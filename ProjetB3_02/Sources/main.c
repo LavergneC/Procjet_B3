@@ -46,32 +46,17 @@
 #include "bsp.h"
 #include "mon_SPI.h"
 #include "optical.h"
-#include "RF.h"
 
-static RF_datas rf_datas; 
-
+unsigned char rot_GYR[2];
 
 ISR(TPM1_interupt){
 	static signed char dxdy[2];
 
-	PTAD_PTAD1 = 1;//for tests only
+	getValues(dxdy, MODULE1);
 
-	/*getValues(dxdy, MODULE1);
-	rf_datas.tx_buffer[MVT_DX] = dxdy[MVT_DX];
-	rf_datas.tx_buffer[MVT_DY] = dxdy[MVT_DY];
 	getValues(dxdy, MODULE2);
-	rf_datas.tx_buffer[ROTATION1] = dxdy[ MVT_DY] - rf_datas.tx_buffer[ MVT_DY];*/
 
-	//getData(GIRO_Z, &rf_datas.tx_buffer[ROTATION2_H], &rf_datas.tx_buffer[ROTATION2_L]); // datas de la centrale inertielle
-
-	rf_datas.flag_updated = UPDATED;
-
-	if (rf_datas.flag_updated = UPDATED){
-		rf_datas.flag_updated = RESET;
-		TX_RF(rf_datas.tx_buffer, TX_BUFFER_LENGHT);
-	}
-
-	PTAD_PTAD1 = 0;//for tests only
+	getData(GIRO_Z, &rot_GYR[0], &rrot_GYR[1]); // datas de la centrale inertielle
 
 	TPM1SC_TOF = 0;
 
@@ -89,18 +74,14 @@ void main(void){
 
 	/* Write your code here */
 	/* For example: for(;;) { } */	
-	//SPI_init();
-	//sensors_init();
+	SPI_init();
+	sensors_init();
 
 	I2C_init();
 	initCentrale(&status);
 
 
-	for(;;){
-		//rotation2 = (signed short)(((unsigned short)rot1<<8) | (unsigned short)rot2); <- pour envoyer sous forme d'un short
-
-		//RX_RF(rf_datas.rx_buffer, RX_BUFFER_LENGHT);
-	}
+	for(;;){}
 
 	/*** Don't write any code pass this line, or it will be deleted during code generation. ***/
 	/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
