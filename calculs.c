@@ -1,5 +1,13 @@
 #include "calculs.h"
 
+/*
+*getMoteurs
+* La fonction permet d'obtenir les puissance à appliquer aux moteur à partir des informations de la manette
+* @param : signed short dx : deplacement horizontale souhaité
+           signed short dy : deplacement vertical souhaité
+           signed short rotation : rotation souhaitée
+           signed char VMoteurs[4] : tableau permetant de stocker les quatres valeurs obtenues
+*/
 void getVMoteurs(signed short dx, signed short dy, signed short rot, signed char VMoteurs[4]){
     unsigned char i,j;
     signed long temp[4]={0,0,0,0};
@@ -34,6 +42,12 @@ void getVMoteurs(signed short dx, signed short dy, signed short rot, signed char
     }
 }
 
+/*
+*initPID 
+* La fonction permet d'initialiser la variable suite à sa création en initialisant toutes les variables de la structure
+* @param : *vars : les variables PID correspondantes au processus souhaité
+            double kp, ki, kd : Facteurs obtenus suite à la calibration utils pour le calcul
+*/
 void initPID(VariablesPID *vars, double kp, double ki, double kd){ 
     unsigned char i;
 
@@ -45,6 +59,14 @@ void initPID(VariablesPID *vars, double kp, double ki, double kd){
     vars->i = 0;
 }
 
+/*
+* calculPID
+* La fonction effectue le calcul de PID en mattant à jour l variable
+* @param : signed short commande : valeur envoyer par la manette (dx ou dy ou rot)
+*          signed short retourCapteur : deplacement mesurer grâce à un capteur optique par example
+*          VariablesPID *variablesPID : Variable stockant toutes les valeurs persistantes utiles au calcul du PID
+* @return : signed short : valeur de la nouvelle commande ajustée
+*/
 signed short calculPID(signed short commande, signed short retourCapteur, VariablesPID *variablesPID){
     unsigned char j;
     double P, I, D;
@@ -75,25 +97,12 @@ signed short calculPID(signed short commande, signed short retourCapteur, Variab
     return somme;
 }
 
-void afficherVar(VariablesPID *var, unsigned char afficherTab){
-    unsigned char j;
-
-    printf("Variable PID :\n");
-    printf("    kp : %f | ki : %f | kd : %f \n i = %d \n",var->kp,var->ki,var->kd, var->i);
-    if(afficherTab){
-        printf("    Liste err :\n");
-        for(j=0; j<100; j++)
-            printf("    %d, ",var->errors[j]);
-            printf("\n");
-    }
-}
-
-unsigned long absL(signed long ch){
-    if(ch<0)
-        ch = -ch;
-    return (unsigned long)ch;
-}
-
+/*
+* convertionCapteurToPID
+* Cette fonciton permet de convertir une mesure d'un capteur optique afin de l'injecter dans un calcul de PID
+* @param : signed char data : la donnée en provenance d'un capteur
+* @return signed short : la valeur convertie
+*/
 signed short convertionCapteurToPID(signed char data){
     double tempData = data;
 
@@ -102,6 +111,13 @@ signed short convertionCapteurToPID(signed char data){
     return (signed short)tempData;
 }
 
+/*
+* convAngleAbsolu
+* Permet d'obtenir l'angle absolu du robot par rapport à sa position de départ ou depuis le dernier reset
+* @param : signed short vitesse : valeur meusurée par la centrale inertielle (GYRO_Z)
+           unsigned char reset : si reset !=0 la position actuelle devient la position de référence
+           signed short * angle : valeur absolu de l'angle du robot
+*/
 void convAngleAbsolu(signed short vitesse, unsigned char reset, signed short * angle){
     float decalage=0;
     signed short newAngle;
@@ -109,13 +125,20 @@ void convAngleAbsolu(signed short vitesse, unsigned char reset, signed short * a
         *angle=0;
     decalage = vitesse*Tech_centrale;
     newAngle= *angle + decalage;
-    newAngle/=131;
+    newAngle/=131; //131 count /°/s
     *angle = newAngle;
     return;
 }
 
+/*
+* getvitesse
+* permet d'obtenir la vitesse du robot grâce aux valeurs des capteurs
+* @param : signed char dx : mesure de deplacement horizontal
+*          signed char dy : mesure de deplacement vertical
+* @return : double : vitesse en m/s
+*/
 double getVitesse(signed char dx, signed char dy){
     signed short normeV = sqrt(dx*dx + dy*dy);
-    double distance = (normeV * 2.54)/400;
+    double distance = (normeV * 2.54)/400; //une valeur de 400 correspond à un pied (2.25 cm)
     return distance/Tech_capteur;
 }
